@@ -52,7 +52,7 @@ namespace fancy_boxes.src
                     // early exit, we use this set to track box colors that we've already checked and we know for a fact don't contain this color
                     if (colorsThatDoNotContainTargetColor.Contains(box.color))
                     {
-                        break;
+                        continue;
                     }
 
                     var containsBoxesInside = boxes.TryGetValue(box.color, out IEnumerable<Box> boxesInsideDeepBox);
